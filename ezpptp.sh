@@ -31,7 +31,7 @@ echo
 echo "######################################################"
 echo "Downloading and Installing PoPToP"
 echo "######################################################"
-apt-get update
+#apt-get update
 apt-get -y install pptpd
 
 echo
