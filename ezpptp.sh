@@ -18,14 +18,17 @@ echo "1) Set up new PoPToP server AND create one user"
 echo "2) Create additional users"
 echo "######################################################"
 read x
+
+# get the VPS IP
+ ip=`ip -f inet addr | grep global | grep brd |awk '{print $2}' | awk -F / '{print $1}'`
+ 
 if test $x -eq 1; then
 	echo "Enter username that you want to create (eg. vpn or dadi.me):"
 	read u
 	echo "Specify password that you want the server to use:"
 	read p
 
-# get the VPS IP
- ip=`ip -f inet addr | grep global | grep brd |awk '{print $2}' | awk -F / '{print $1}'`
+
 
 echo
 echo "######################################################"
