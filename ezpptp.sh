@@ -21,7 +21,7 @@ read x
 
 # get the VPS IP
  ip=`ip -f inet addr | grep global | grep brd |awk '{print $2}' | awk -F / '{print $1}'`
- 
+echo "ip is :$ip" 
 if test $x -eq 1; then
 	echo "Enter username that you want to create (eg. vpn or dadi.me):"
 	read u
